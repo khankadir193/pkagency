@@ -23,7 +23,6 @@ const getDataFromGoogleSheets = (SHEET_ID,RANGE,SHEET_TITLE,tableNo) => {
           console.log(jsonData)
       
           rows.forEach((rowData) => {
-            // rowData.c.splice(1, 0, { v: null });
             const row = document.createElement("tr");
             rowData.c.forEach((cellData, index) => {
               const cell = document.createElement("td");
@@ -37,14 +36,15 @@ const getDataFromGoogleSheets = (SHEET_ID,RANGE,SHEET_TITLE,tableNo) => {
                 link.textContent = cellData?.v;
                 // link.setAttribute("href","https://abdulkadirkhan786.netlify.app/");
                 let id = cellData?.v;
-                // console.log('id...???',id);
-                // console.log('id...typeof',typeof id);
                 link.setAttribute("href",`http://www.kktv1.com/m/?roomid=${id}`);   // here i am updating the user id dynamically...
                 // cell.textContent = cellData.v;
                 cell.appendChild(link);
                 row.appendChild(cell);
-              }else if (index !== 3) {
+              }else if (index === 4) {
                 cell.textContent = cellData?.v;
+                row.appendChild(cell);
+              }else{
+                cell.textContent = cellData?.f;
                 row.appendChild(cell);
               }
             });
@@ -63,10 +63,11 @@ const getDataFromGoogleSheets = (SHEET_ID,RANGE,SHEET_TITLE,tableNo) => {
   }
   
   getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A75:E77","Dec 23 Agency PK Battle","1");
-  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A6:E8","Dec 23 Agency PK Battle","2");
-  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A11:E13","Dec 23 Agency PK Battle","3");
-  // // round2
-  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A16:E18","Dec 23 Agency PK Battle","4");
-  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A22:E24","Dec 23 Agency PK Battle","5");
+  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A79:E81","Dec 23 Agency PK Battle","2");
+  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A83:E85","Dec 23 Agency PK Battle","3");
+  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A87:E89","Dec 23 Agency PK Battle","4");
+  // // // round2
+  // getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A16:E18","Dec 23 Agency PK Battle","4");
+  // getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A22:E24","Dec 23 Agency PK Battle","5");
 
 
