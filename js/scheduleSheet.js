@@ -1,5 +1,5 @@
 
-const getDataFromGoogleSheets = (SHEET_ID,RANGE,SHEET_TITLE,tableNo) => {
+const getDataFromGoogleSheets = (SHEET_ID,RANGE,SHEET_TITLE,tableNo,round) => {
     const GOOGLE_SHEET_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${RANGE}`;
    
     fetch(GOOGLE_SHEET_URL)
@@ -23,6 +23,7 @@ const getDataFromGoogleSheets = (SHEET_ID,RANGE,SHEET_TITLE,tableNo) => {
           console.log(jsonData)
       
           rows.forEach((rowData) => {
+            console.log('rowData...???',rowData);
             const row = document.createElement("tr");
             rowData.c.forEach((cellData, index) => {
               const cell = document.createElement("td");
@@ -41,6 +42,12 @@ const getDataFromGoogleSheets = (SHEET_ID,RANGE,SHEET_TITLE,tableNo) => {
                 cell.appendChild(link);
                 row.appendChild(cell);
               }else if (index === 4) {
+                cell.textContent = cellData?.v;
+                row.appendChild(cell);
+              }else if (round === "round1" && index === 0) {
+                cell.textContent = cellData?.f;
+                row.appendChild(cell);
+              }else if (round === "round2" && index === 0) {
                 cell.textContent = cellData?.v;
                 row.appendChild(cell);
               }else{
@@ -62,12 +69,12 @@ const getDataFromGoogleSheets = (SHEET_ID,RANGE,SHEET_TITLE,tableNo) => {
       });
   }
   
-  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A75:E77","Dec 23 Agency PK Battle","1");
-  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A79:E81","Dec 23 Agency PK Battle","2");
-  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A83:E85","Dec 23 Agency PK Battle","3");
-  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A87:E89","Dec 23 Agency PK Battle","4");
+  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A75:E77","Dec 23 Agency PK Battle","1","round1");
+  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A79:E81","Dec 23 Agency PK Battle","2","round1");
+  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A83:E85","Dec 23 Agency PK Battle","3","round1");
+  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A87:E89","Dec 23 Agency PK Battle","4","round1");
   // // // round2
-  // getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A16:E18","Dec 23 Agency PK Battle","4");
-  // getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A22:E24","Dec 23 Agency PK Battle","5");
+  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A92:E94","Dec 23 Agency PK Battle","5","round2");
+  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A96:E98","Dec 23 Agency PK Battle","6","round2");
 
 
