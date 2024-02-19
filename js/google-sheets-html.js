@@ -111,11 +111,11 @@ function rowsCount(item){
  
   dataList.forEach(dataCount);
   console.log("counter is"+counter);
-  if(counter>=0   &&  counter<24){
+  if(counter>=0   &&  counter<12){
      $('#conDiv').append('<div class="colThree"><div><a href="http://www.kktv1.com/m/?roomid='+id+'"><img src="../common/img/kk_head_avatar_men.png" id="u_img_'+id+'" alt="" class="imgClass"></a></div><div class="centerDiv"><img src="img/coin.png" class="imgsmal">'+name+'<br>ID-'+id+'</div><div class="lastDiv"><span class="dancing">'+times+'</span></div></div>');
 
   }
-  else  if(counter>=24 &&  counter<40){
+  else  if(counter>=12 &&  counter<25){
 
 
   
@@ -125,7 +125,7 @@ function rowsCount(item){
 
   }
 
-  else   if(counter>=40 &&  counter<=48){
+  else   if(counter>=25 &&  counter<=33){
 $('#agencyrec').append('<div class="colThree"><div>Id: '+id+'</div><div class="centerDiv"><img src="img/coin.png" class="imgsmal">'+name+'<br></div><div class="lastDiv"><span class="dancing">'+times+'</span><p></p></div></div>');
 
  
