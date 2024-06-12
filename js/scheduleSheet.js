@@ -69,13 +69,12 @@ const getDataFromGoogleSheets = (SHEET_ID,RANGE,SHEET_TITLE,tableNo,round) => {
       });
   }
   
-  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A168:E170","Dec 23 Agency PK Battle","1","round1");
-  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A172:E174","Dec 23 Agency PK Battle","2","round1");
-  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A176:E178","Dec 23 Agency PK Battle","3","round1");
-  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A180:E182","Dec 23 Agency PK Battle","4","round1");
-  // getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A228:E230","Dec 23 Agency PK Battle","5","round1");
+  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A1:E3","Dec 23 Agency PK Battle","1","round1");
+  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A6:E8","Dec 23 Agency PK Battle","2","round1");
+  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A11:E13","Dec 23 Agency PK Battle","3","round1");
+  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A16:E18","Dec 23 Agency PK Battle","4","round1");
   // // // round2
-  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A303:E305","Dec 23 Agency PK Battle","6","round2");
-  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A307:E309","Dec 23 Agency PK Battle","7","round2");
+  // getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A303:E305","Dec 23 Agency PK Battle","6","round2");
+  // getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A307:E309","Dec 23 Agency PK Battle","7","round2");
 
 
