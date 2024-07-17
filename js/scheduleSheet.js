@@ -74,7 +74,7 @@ const getDataFromGoogleSheets = (SHEET_ID,RANGE,SHEET_TITLE,tableNo,round) => {
   getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A109:E111","Dec 23 Agency PK Battle","3","round1");
   getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A113:E115","Dec 23 Agency PK Battle","4","round1");
   // // // round2
-  // getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A22:E24","Dec 23 Agency PK Battle","6","round2");
-  // getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A30:E32","Dec 23 Agency PK Battle","7","round2");
+  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A118:E120","Dec 23 Agency PK Battle","6","round2");
+  getDataFromGoogleSheets("11ZLpOSrhZISYYzGusflZZA3FcXkznRKfvaO_t9hzKJA","A122:E124","Dec 23 Agency PK Battle","7","round2");
 
 
