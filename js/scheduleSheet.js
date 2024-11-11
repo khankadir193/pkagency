@@ -45,7 +45,7 @@ const getDataFromGoogleSheets = (SHEET_ID,RANGE,SHEET_TITLE,tableNo,round) => {
                 cell.textContent = cellData?.v;
                 row.appendChild(cell);
               }else if (round === "round1" && index === 0) {
-                cell.textContent = cellData?.v;
+                cell.textContent = cellData?.f;
                 row.appendChild(cell);
               }else if (round === "round2" && index === 0) {
                 cell.textContent = cellData?.v;
@@ -74,7 +74,7 @@ const getDataFromGoogleSheets = (SHEET_ID,RANGE,SHEET_TITLE,tableNo,round) => {
   getDataFromGoogleSheets("1yUYOtDqWOyXQFa96fpPh1U8ZIUIRwPBQeCSteNLTKPM","A54:E56","Sep 23 Agency PK Battle","3","round1");
   // getDataFromGoogleSheets("1yUYOtDqWOyXQFa96fpPh1U8ZIUIRwPBQeCSteNLTKPM","A210:E212","Sep 23 Agency PK Battle","4","round1");
   // // // round2
-  getDataFromGoogleSheets("1yUYOtDqWOyXQFa96fpPh1U8ZIUIRwPBQeCSteNLTKPM","A58:E60","Sep 23 Agency PK Battle","6","round2");
-  getDataFromGoogleSheets("1yUYOtDqWOyXQFa96fpPh1U8ZIUIRwPBQeCSteNLTKPM","A62:E64","Sep 23 Agency PK Battle","7","round2");
+  // getDataFromGoogleSheets("1yUYOtDqWOyXQFa96fpPh1U8ZIUIRwPBQeCSteNLTKPM","A58:E60","Sep 23 Agency PK Battle","6","round2");
+  // getDataFromGoogleSheets("1yUYOtDqWOyXQFa96fpPh1U8ZIUIRwPBQeCSteNLTKPM","A62:E64","Sep 23 Agency PK Battle","7","round2");
 
 
